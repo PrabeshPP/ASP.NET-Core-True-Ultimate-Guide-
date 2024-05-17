@@ -23,3 +23,4 @@
 /Users/prabeshbista/Downloads/Personal_Projects/ASP.NET Core/MyFirstApp/SimpleApp/obj/Debug/net8.0/SimpleApp.pdb
 /Users/prabeshbista/Downloads/Personal_Projects/ASP.NET Core/MyFirstApp/SimpleApp/obj/Debug/net8.0/SimpleApp.genruntimeconfig.cache
 /Users/prabeshbista/Downloads/Personal_Projects/ASP.NET Core/MyFirstApp/SimpleApp/obj/Debug/net8.0/ref/SimpleApp.dll
+/Users/prabeshbista/Downloads/Personal_Projects/ASP.NET Core/MyFirstApp/SimpleApp/obj/Debug/net8.0/SimpleApp.sourcelink.json

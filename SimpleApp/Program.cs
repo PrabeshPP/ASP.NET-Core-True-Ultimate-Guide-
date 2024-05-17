@@ -4,6 +4,9 @@ var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
 // app.MapGet("/", () => "Smarika loves prabesh");
+/*
+In the get Request, there is no request body
+*/
 
 app.Run(async (HttpContext context) =>
 {
@@ -16,11 +19,22 @@ app.Run(async (HttpContext context) =>
     {
         context.Response.StatusCode = 404;
     }
-     
+
+    context.Response.Headers["Content-type"] = "text/html";
     context.Response.Headers["MyKey"] = "MyValue";
-    context.Response.Headers["Server"] = "AWS S3";
-    await context.Response.WriteAsync("This is the new instance of the HttpContext");
-    await context.Response.WriteAsync("This is another response");
+
+    string path = context.Request.Path;
+    string method = context.Request.Method;
+    if (method == "GET")
+    {
+        HttpRequest request = context.Request;
+        if (request.Query.ContainsKey("id"))
+        {
+
+            string? id = request.Query["id"];
+            await context.Response.WriteAsync($"<p>{id}</p>");
+        }
+    }
 
 });
 
