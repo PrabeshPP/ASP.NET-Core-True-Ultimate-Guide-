@@ -5,7 +5,16 @@ var app = builder.Build();
 
 // app.MapGet("/", () => "Smarika loves prabesh");
 /*
-In the get Request, there is no request body
+1. In the get Request, there is no request body
+2. Reuest headers are sent by the browser and it is a way how browser talks with the server
+*/
+
+/*
+Request Headers Format
+1. Accept: Represents MIME Type of response that is text/html just an example
+2. Accept-Language: natural language of response en-US
+3. Content-Type: Type of request body,  for example, text/html, multipart/form-data
+4. Content-Length: Length of the request body, for example, 100 or 200
 */
 
 app.Run(async (HttpContext context) =>
