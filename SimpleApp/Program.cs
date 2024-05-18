@@ -43,6 +43,8 @@ app.Run(async (HttpContext context) =>
             string? id = request.Query["id"];
             await context.Response.WriteAsync($"<p>{id}</p>");
         }
+    }else{
+        await context.Response.WriteAsync("<p>This is the post method for the </p>");
     }
 
 });
